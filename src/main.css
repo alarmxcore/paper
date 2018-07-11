@@ -6,7 +6,7 @@ a { position: relative; z-index: 20; }
 .right { text-align: right; }
 .walletarea { display: none; border: 2px solid #008de4; }
 hr { margin: 20px 0; border-top: 2px dashed #008000; }
-.keyarea { height: 110px; text-align: left; position: relative; padding: 5px; }
+.keyarea { height: 110px; text-align: left; position: relative; padding: 25px 25px 10px; }
 .keyarea .public { float: left; }
 .keyarea .pubaddress { display: inline-block; height: 40px; padding: 0 0 0 10px; float: left; }
 .keyarea .privwif { margin: 0;  float: right; text-align: right; padding: 0 20px 0 0; position: relative; }
@@ -34,7 +34,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #generate { font-family: monospace; font-size: 1.25em; height: 305px; text-align: left; position: relative; padding: 5px; border: 2px solid #008de4; clear: both; }
 #generate span { padding: 5px 5px 0 5px; }
 #generatekeyinput { position: relative; z-index: 20; }
-#keyarea { height: 250px; }
+#keyarea { height: 250px; border-bottom: 1px solid #bfbfbf; }
 #keyarea .pubaddress { float: none; display: block; padding: 0; height: auto; }
 #keyarea .label { text-decoration: none; }
 #keyarea .privwif { float: none; text-align: right; position: relative; padding: 0; }
@@ -42,52 +42,70 @@ input[type=checkbox] { position: relative; z-index: 20; }
 #keyarea .qrcode_private { float: none; display: block; top: 0; text-align: right; padding: 13px 11px 11px 11px; }
 #keyarea .private { width: 30%; display: table-cell; }
 #keyarea .public { width: 30%; display: table-cell; }
-#singlearea { font-size: 90%; }
+
+#singlearea { font-size: 90%;}
 #singlesecret { position: relative; top: -130px; float: right; right: 200px; color: red; font-weight: bolder; font-size: 200%;  }
 #singleshare { position: relative; top: -110px; float: left; left: 160px; color: #009900; font-weight: bolder; font-size: 200%;  }
-#singlesafety { text-align: left; padding: 5px; border-top: 2px solid #008de4; top: -25px; position: relative; }
+#singlesafety { text-align: left; padding: 5px; border-top: 2px solid #008de4; position: relative; }
+
+#coinLogo { width: 55px; height: 55px; padding: 10px; position: absolute; top: 2px; left: 10px; }
+#coinLogoImg { width: 100%; height: 100%; }
+
+.coinIcoin { width: 64px; height: 64px; padding: 10px; position: absolute; top: 272px; left: 48px; }
+#coinImg { width: 100%; height: 100%; }
+.backLogo { float: right; width: 50px; height: 50px; }
+
 
 #main { position: relative; text-align: center; margin: 0px auto; width: 1008px; }
 #logo { width: 578px; height: 80px; }
 
 #paperarea { min-height: 120px; display: none; }
-#paperarea .keyarea { border: 2px solid #008de4; border-top: 0; }
+#paperarea .keyarea { border: 1px solid #BFBFBF; border-top: 0; }
 #paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: Ubuntu, Arial; padding: 0; margin: 0; }
-#paperarea .artwallet .papersvg { width: 486px; height: 261px; border: 0; margin: 0; padding: 0; left: 0; }
-#paperarea .artwallet .qrcode_public { top: 52px; left: 17px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
-		                                padding: 5px 5px 2px 5px; }
-#paperarea .artwallet .qrcode_private { top: 104px; left: 360px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
-		                                padding: 5px 5px 2px 5px; }
-#paperarea .artwallet .btcaddress
-{
-	position: absolute; top: 240px; left: 139px; z-index: 100; font-size: 10px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;
-		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
-		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
-		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
-		-o-transform-origin:top left;      -o-transform:rotate(-90deg);
-		transform-origin:top left;         transform:rotate(-90deg);
-}
+#paperarea .artwallet .papersvg { width: 1004px; height: 426px; border: 0; margin: 0; padding: 0; left: 0; }
+#paperarea .artwallet .qrcode_public { top: 263px; left: 780px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+                                    padding: 5px 5px 2px 5px; }
+#paperarea .artwallet .qrcode_private { top: 37px; right: 446px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+                                    padding: 5px 5px 2px 5px;
+                                    -ms-transform: rotate(180deg); /* IE 9 */
+                    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+                    transform: rotate(180deg);
+                                     }
+	#paperarea .artwallet .btcaddress
+																		 {
+																		   position: absolute; bottom: 88px; left: 874px; z-index: 100; font-size: 11px; background-color: transparent;
+																		   font-weight: 100; color: #000000; margin: 0; width: 124px; height: 32px; text-align: center;
+																		     word-wrap: break-word; font-family: Courier, monospace;
+																		     -ms-transform: rotate(-90deg); /* IE 9 */
+																		   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+																		   transform: rotate(-90deg); font-family: Courier, monospace;
+																		 }
 #paperarea .artwallet .btcprivwif
-{
-	position: absolute; top: 236px; left: 346px; z-index: 100; font-size: 7px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;
-		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
-		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
-		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
-		-o-transform-origin:top left;      -o-transform:rotate(-90deg);
-		transform-origin:top left;         transform:rotate(-90deg);
-}
+																		 {
+																		   position: absolute; top: 86px; right: 540px; z-index: 100; font-size: 11px; background-color: transparent;
+																		   font-weight: 100; color: #000000; margin: 0; width: 124px; height: 32px; text-align: center;
+																		     word-wrap: break-word;
+																		   -ms-transform: rotate(90deg); /* IE 9 */
+																		   -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+																		   transform: rotate(90deg);
+																		     font-family: Courier, monospace;
+																		 }
 #paperarea .artwallet .btcencryptedkey
-{
-	position: absolute; top: 174px; left: 332px; z-index: 100; font-size: 8px; background-color: transparent;
-	font-weight:bold; color: #000000; margin: 0;
-		-webkit-transform-origin:top left; -webkit-transform:rotate(-90deg);
-		-moz-transform-origin:top left;    -moz-transform:rotate(-90deg);
-		-ms-transform-origin:top left;     -ms-transform:rotate(-90deg);
-		-o-transform-origin:top left;      -o-transform:rotate(-90deg);
-		transform-origin:top left;         transform:rotate(-90deg);
-}
+																		 {
+  position: absolute; top: 86px; right: 540px; z-index: 100; font-size: 11px; background-color: transparent;
+	 font-weight:100; color: #000000; margin: 0; width: 110px; height: 32px; text-align: center;
+				word-wrap: break-word;
+			-ms-transform: rotate(90deg); /* IE 9 */
+				-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+			 transform: rotate(90deg);
+		 font-family: Courier, monospace;
+																		 }
+#paperarea .artwallet .btcaddress, #paperarea .artwallet .btcprivwif { z-index: 999; }
+.paperWalletText { z-index: 999;}
+.paperWalletText { bottom: 8px; height: 156px; left: 339px; padding: 15px 15px 17px 37px; position: absolute; width: 265px; font-size: 10px; color: #383838; line-height: 15px; }
+.paperWalletText ul { margin: 0px; padding: 0px; }
+.paperWalletText li { line-height: 13px; margin-bottom: 5px; }
+
 #bulkarea .body { padding: 5px 0 0 0; }
 #bulkarea .format { font-style: italic; font-size: 90%; }
 #bulktextarea { font-size: 90%; width: 98%; margin: 4px 0 0 0; }
