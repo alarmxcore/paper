@@ -164,15 +164,16 @@ ninja.wallets.paperwallet = {
 		var image;
 		if (ninja.wallets.paperwallet.encrypt) {
 			keyelement = 'btcencryptedkey'
-			image = '<%= assets["images/paper-wallet-empty"] %>';
+			image = '<%= assets["images/alarmx"] %>';
 		}
 		else {
-			image = '<%= assets["images/paper-wallet-empty"] %>';
+			image = '<%= assets["images/alarmx"] %>';
 
 		}
 
 		var walletHtml =
-							"<div class='artwallet' id='artwallet" + i + "'>" +
+							"<div class='coinIcoin'> <img id='coinImg' src='images/alarmx-logo.png' alt='alarmx_logo'></div>" +
+              "<div class='artwallet' id='artwallet" + i + "'>" +
 		//"<iframe src='bitcoin-wallet-01.svg' id='papersvg" + i + "' class='papersvg' ></iframe>" +
 								"<img id='papersvg" + i + "' class='papersvg' src='" + image + "' />" +
 								"<div id='qrcode_public" + i + "' class='qrcode_public'></div>" +
