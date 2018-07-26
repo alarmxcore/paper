@@ -5906,7 +5906,7 @@ Bitcoin.ECKey = (function () {
 		return /^[A-Fa-f0-9]{64}$/.test(key);
 	};
 
-	// 51 characters base58, always starts with a '7'
+	// 51 characters base58, always starts with a '6'
 	ECKey.isWalletImportFormat = function (key) {
 		key = key.toString();
 		return (ECKey.privateKeyPrefix == 0x9e) ?
@@ -6945,12 +6945,12 @@ input[type=checkbox] { position: relative; z-index: 20; }
 					<hr />
 					<div class="privqr">
 						<div class="item">
-							<span class="label"><span id="detaillabelprivwif">Private Key WIF<br />51 characters base58, starts with a</span> <span id="detailwifprefix">'7'</span></span>
+							<span class="label"><span id="detaillabelprivwif">Private Key WIF<br />51 characters base58, starts with a</span> <span id="detailwifprefix">'6'</span></span>
 							<div id="detailqrcodeprivate" class="qrcode_private"></div>
 							<span class="output" id="detailprivwif"></span>
 						</div>
 						<div class="item right">
-							<span class="label"><span id="detaillabelprivwifcomp">Private Key WIF Compressed<br />52 characters base58, starts with a</span> <span id="detailcompwifprefix">'X'</span></span>
+							<span class="label"><span id="detaillabelprivwifcomp">Private Key WIF Compressed<br />52 characters base58, starts with a</span> <span id="detailcompwifprefix">'Q'</span></span>
 							<div id="detailqrcodeprivatecomp" class="qrcode_private"></div>
 							<span class="output" id="detailprivwifcomp"></span>
 						</div>
@@ -9962,7 +9962,7 @@ ninja.wallets.paperwallet = {
 								"<div id='qrcode_private" + i + "' class='qrcode_private'></div>" +
 								"<div class='btcaddress' id='btcaddress" + i + "'></div>" +
 								"<div class='" + keyelement + "' id='" + keyelement + i + "'></div>" +
-								"<div class='paperWalletText'><img class='backLogo' src='src/images/alarmx-logo.png' alt='alarmx_logo'><ul><li>To deposit funds to this paper wallet, send cryptocurrency to its public address, anytime.</li><li>Verify your balance by searching for the public address using a blockchain explorer such as blockchain.info.</li><li><b>DO NOT REVEAL THE PRIVATE KEY</b> until you are ready to import the balance on this wallet to a cryptocurrency client, exchange or online wallet.</li></ul><b>Amount :</b> ___________ &nbsp; &nbsp; &nbsp; <b>Date :</b> ________________<br><b>Notes :</b> ______________________________________</div>" +
+								"<div class='paperWalletText'><img class='backLogo' src='src/images/alarmx-logo.png' alt='alarmx_logo'><ul><li>To deposit funds to this paper wallet, send cryptocurrency to its public address, anytime.</li><li>Verify your balance by searching for the public address using a blockchain explorer such as explorer.alarmx.io.</li><li><b>DO NOT REVEAL THE PRIVATE KEY</b> until you are ready to import the balance on this wallet to a cryptocurrency client, exchange or online wallet.</li></ul><b>Amount :</b> ___________ &nbsp; &nbsp; &nbsp; <b>Date :</b> ________________<br><b>Notes :</b> ______________________________________</div>" +
 
 							"</div>";
 		return walletHtml;
